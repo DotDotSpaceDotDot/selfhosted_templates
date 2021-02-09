@@ -3,48 +3,6 @@
 	"templates": [
 		{
 			"categories": [
-				"Music"
-			],
-			"description": null,
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "100",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/headphones:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/headphones-icon.png",
-			"name": "headphones",
-			"platform": "linux",
-			"ports": [
-				"8181:8181/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Headphones",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/portainer/Files/AppData/Config/Headphones",
-					"container": "/config"
-				},
-				{
-					"bind": "/portainer/Downloads",
-					"container": "/Downloads"
-				},
-				{
-					"bind": "/portainer/Music",
-					"container": "/music"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Tools",
 				"Web",
 				"Other"
@@ -307,29 +265,39 @@
 					"name": "PUID"
 				},
 				{
+					"default": "Pacific/Auckland",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
 					"default": "100",
 					"label": "PGID",
 					"name": "PGID"
 				}
 			],
-			"image": "linuxserver/nzbget:latest",
+			"image": "jshridha/docker-nzbgetvpn:latest",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
 			"name": "nzbget",
 			"platform": "linux",
 			"ports": [
 				"6789:6789/tcp"
+				"8118:8118/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "NZBGet",
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nzbget",
+					"bind": "/portainer/Files/AppData/Config/NZBgetvpn",
 					"container": "/config"
 				},
 				{
 					"bind": "/portainer/Downloads",
 					"container": "/downloads"
+				},
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime"
 				}
 			]
 		},

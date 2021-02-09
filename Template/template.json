@@ -292,12 +292,17 @@
 					"container": "/config"
 				},
 				{
+					"bind": "/portainer/Files/AppData/Config/.openvpn",
+					"container": "/config/openvpn"
+				},
+				{
 					"bind": "/portainer/Downloads",
-					"container": "/downloads"
+					"container": "/data"
 				},
 				{
 					"bind": "/etc/localtime",
 					"container": "/etc/localtime"
+					"readonly": true
 				}
 			]
 		},

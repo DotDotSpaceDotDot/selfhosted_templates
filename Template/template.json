@@ -273,6 +273,45 @@
 					"default": "100",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"default": "yes",
+					"label": "STRICT_PORT_FORWARD",
+					"name": "STRICT_PORT_FORWARD"
+				},
+				{
+					"default": "yes",
+					"label": "ENABLE_PRIVOXY",
+					"name": "ENABLE_PRIVOXY"
+				},
+				{
+					"label": "LAN_NETWORK",
+					"name": "LAN_NETWORK"
+				},
+				{
+					"label": "NAME_SERVERS",
+					"name": "NAME_SERVERS"
+				},
+				{
+					"default": "yes",
+					"label": "VPN_ENABLED",
+					"name": "VPN_ENABLED"
+				},
+				{
+					"label": "VPN_OPTIONS",
+					"name": "VPN_OPTIONS"
+				},
+				{
+					"label": "VPN_PASS",
+					"name": "VPN_PASS"
+				},
+				{
+					"label": "VPN_PROV",
+					"name": "VPN_PROV"
+				},
+				{
+					"label": "VPN_USER",
+					"name": "VPN_USER"
 				}
 			],
 			"image": "jshridha/docker-nzbgetvpn:latest",

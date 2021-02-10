@@ -22,8 +22,8 @@
     "8117:8118/tcp"  
     ],
     "cap_add": [
-    "NET_ADMIN"
-    "SYS_MODULE"  
+      "NET_ADMIN"
+      "SYS_MODULE"  
     ],
     "volumes": [
       {

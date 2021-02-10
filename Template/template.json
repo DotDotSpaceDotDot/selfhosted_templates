@@ -1,24 +1,46 @@
 [
   {
     "type": 1,
-    "title": "Deluge",
-    "namme": "deluge",
+    "title": "Delugevpn",
+    "name": "delugevpn",
     "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
     "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
-    "image": "linuxserver/deluge:latest",
+    "image": "binhex/arch-delugevpn:latest",
     "categories": [
       "Downloaders"
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
+    "ports": [
+    "51413:51413/tcp",
+    "51413:51413/udp"
+    "58846:58846/tcp"
+    "58946:58946/tcp"  
+    "6881:6881/tcp"
+    "6881:6881/udp"
+    "8112:8112/tcp"
+    "8117:8118/tcp"  
+    ],
+    "cap_add": [
+    "NET_ADMIN"
+    "SYS_MODULE"  
+    ],
     "volumes": [
       {
         "container": "/config",
-        "bind": "!config/Deluge"
+        "bind": "!config/Delugevpn"
       },
       {
-        "container": "/downloads",
+        "container": "/data",
         "bind": "!downloads"
+      },
+      {
+        "container": "/config/.openvpn",
+        "bind": "!config/openvpn"
+      },
+      {
+      "container": "/etc/localtime",
+      "bind": "!localtime"
       }
     ],
     "env": [

@@ -1,11 +1,11 @@
 [
   {
     "type": 1,
-    "title": "Deluge",
-    "namme": "deluge",
+    "title": "Delugevpn",
+    "namme": "delugevpn",
     "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
     "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
-    "image": "linuxserver/deluge:latest",
+    "image": "binhex/arch-delugevpn:latest",
     "categories": [
       "Downloaders"
     ],

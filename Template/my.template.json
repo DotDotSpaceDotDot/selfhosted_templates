@@ -11,6 +11,20 @@
     ],
     "platform": "linux",
     "restart_policy": "unless-stopped",
+    "ports": [
+    "51413:51413/tcp",
+    "51413:51413/udp"
+    "58846:58846/tcp"
+    "58946:58946/tcp"  
+    "6881:6881/tcp"
+    "6881:6881/udp"
+    "8112:8112/tcp"
+    "8117:8118/tcp"
+    ],
+    "cap_add": [
+      "NET_ADMIN"
+      "SYS_MODULE"  
+    ],
     "volumes": [
       {
         "container": "/config",

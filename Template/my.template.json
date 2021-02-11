@@ -17,7 +17,7 @@
         "bind": "!config/Deluge"
       },
       {
-        "container": "/downloads",
+        "container": "/data",
         "bind": "!downloads"
       }
     ],
@@ -33,9 +33,9 @@
         "default": "!PGID"
       },
       {
-        "name": "UMASK_SET",
-        "label": "UMASK_SET",
-        "default": "000"
+        "name": "TZ",
+        "label": "TZ",
+        "default": "Pacific/Auckland"
       }
     ]
   }

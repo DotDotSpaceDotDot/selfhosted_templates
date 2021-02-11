@@ -1,11 +1,11 @@
 [
   {
     "type": 1,
-    "title": "Delugevpn",
-    "namme": "delugevpn",
+    "title": "Deluge",
+    "namme": "deluge",
     "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
     "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
-    "image": "binhex/arch-delugevpn:latest",
+    "image": "linuxserver/deluge:latest",
     "categories": [
       "Downloaders"
     ],
@@ -14,10 +14,10 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "!config/Delugevpn"
+        "bind": "!config/Deluge"
       },
       {
-        "container": "/data",
+        "container": "/downloads",
         "bind": "!downloads"
       }
     ],
@@ -33,9 +33,9 @@
         "default": "!PGID"
       },
       {
-        "name": "TZ",
-        "label": "TZ",
-        "default": "Pacific/Auckland"
+        "name": "UMASK_SET",
+        "label": "UMASK_SET",
+        "default": "000"
       }
     ]
   }

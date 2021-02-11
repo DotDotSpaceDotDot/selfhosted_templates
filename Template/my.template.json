@@ -19,10 +19,6 @@
       {
         "container": "/data",
         "bind": "!downloads"
-      },
-      {
-      "container": "/etc/localtime",
-      "bind": "!localtime"
       }
     ],
     "env": [
